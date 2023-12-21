@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <title>Bank Card Banking </title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Bank Card Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- map -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- css files -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- bootstrap css -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- custom css -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- fontawesome css -->
+    <!-- //css files -->
+
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Niramit:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
+    <!-- //google fonts -->
+    <!-- map -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="../../../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+        (function() {
+            if (typeof _bsa !== 'undefined' && _bsa) {
+                // format, zoneKey, segment:value, options
+                _bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+            }
+        })();
+    </script>
+    <script>
+        (function() {
+            if (typeof _bsa !== 'undefined' && _bsa) {
+                // format, zoneKey, segment:value, options
+                _bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
+            }
+        })();
+    </script>
+    <script>
+        (function() {
+            if (typeof _bsa !== 'undefined' && _bsa) {
+                // format, zoneKey, segment:value, options
+                _bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+            }
+        })();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-149859901-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149859901-1');
+    </script>
+
+    <script>
+        window.ga = window.ga || function() {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+        ga('create', 'UA-149859901-1', 'demo.w3layouts.com');
+        ga('require', 'eventTracker');
+        ga('require', 'outboundLinkTracker');
+        ga('require', 'urlChangeTracker');
+        ga('send', 'pageview');
+    </script>
+    <script async src='../../../../../../js/autotrack.js'></script>
+
+    <meta name="robots" content="noindex">
+
+    <body>
+        <link rel="stylesheet" href="../../../../../../assests/css/font-awesome.min.css">
+        <!-- New toolbar-->
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 9999;
+                padding: 40px 5px;
+                padding-top: 70px;
+                margin-bottom: 70px;
+                background: #0D1326;
+                border-top-left-radius: 9px;
+                border-bottom-left-radius: 9px;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar a {
+                display: block;
+                color: #e6ebff;
+                text-decoration: none;
+                line-height: 24px;
+                opacity: .6;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar span.w3l-icon {
+                display: block;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar a:hover {
+                opacity: 1;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar .w3l-icon svg {
+                color: #e6ebff;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar .responsive-icons {
+                margin-top: 30px;
+                border-top: 1px solid #41414d;
+                padding-top: 40px;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar .demo-btns {
+                border-top: 1px solid #41414d;
+                padding-top: 30px;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar .responsive-icons a span.fa {
+                font-size: 26px;
+            }
+            
+            #w3lDemoBar.w3l-demo-bar .no-margin-bottom {
+                margin-bottom: 0;
+            }
+            
+            @media (max-width: 992px) {
+                #w3lDemoBar.w3l-demo-bar a.desktop-mode {
+                    display: none;
+                }
+            }
+            
+            @media (max-width: 767px) {
+                #w3lDemoBar.w3l-demo-bar a.tablet-mode {
+                    display: none;
+                }
+            }
+            
+            @media (max-width: 568px) {
+                #w3lDemoBar.w3l-demo-bar a.mobile-mode {
+                    display: none;
+                }
+                #w3lDemoBar.w3l-demo-bar .responsive-icons {
+                    margin-top: 0px;
+                    border-top: none;
+                    padding-top: 0px;
+                }
+                #right-sidebar,
+                .pull-right {
+                    width: 90px;
+                }
+                #w3lDemoBar.w3l-demo-bar .no-margin-bottom-mobile {
+                    margin-bottom: 0;
+                }
+            }
+        </style>
+
+        <!-- header -->
+        <header>
+            <div class="container">
+                <!-- nav -->
+                <nav class="py-3 d-lg-flex">
+                    <div id="logo">
+                        <h1> <a href="index.html"><span class="fa fa-university"></span> Bank Card </a></h1>
+                    </div>
+                    <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu ml-auto mt-1">
+                        <li class=""><a href="index.html">Home</a></li>
+                        <li class=""><a href="about.html">About</a></li>
+                        <li class=""><a href="services.html">Services</a></li>
+                        <li class=""><a href="blog.html">Blog</a></li>
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                        <li class="last-grid"><a href="#">Call Now</a></li>
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- inner-banner -->
+        <section class="inner-banner" id="home">
+            <div class="inner-layer">
+                <div class="container">
+                </div>
+            </div>
+        </section>
+        <!-- //inner-banner -->
+
+        <!-- breadcrumb -->
+        <div class="breadcrumb-w3pvt">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item" aria-current="page">Contact</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- //breadcrumb -->
+        <!-- contact -->
+        <section class="contact py-5">
+            <div class="container py-lg-5">
+                <h2 class="heading mb-sm-5 mb-4"> <strong> Contact Us </strong></h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 contact-address">
+                        <h4 class="mb-4 w3f_title">Contact Address</h4>
+                        <ul class="list-w3">
+                            <li class="d-flex"><span class="fa mt-1 mr-1 fa-map-marker"></span>EL Gomhorreya Street,<br> Mansoura, Dakahlia </li>
+                            <li class="my-3"><span class="fa mr-1 fa-phone"></span>050 2203274</li>
+                            <li class="my-3"><span class="fa mr-1 fa-phone"></span>050 2203273</li>
+                            <li class=""><span class="fa mr-1 fa-envelope"></span><a href="mailto:info@bank.com">info@bank.com</a></li>
+                        </ul>
+                        <h4 class="mt-sm-5 mt-4 mb-3 w3f_title">Follow Us</h4>
+                        <p>We are here to help.</p>
+                        <ul class="list-social">
+                            <li><a href="#" class="facebook"><span class="fa mr-1 fa-facebook"></span></a></li>
+                            <li class="my-3"><a href="#" class="twitter"><span class="fa mr-1 fa-twitter"></span></a></li>
+                            <li class="my-3"><a href="#" class="google"><span class="fa mr-1 fa-google-plus"></span></a></li>
+                            <li class=""><a href="#" class="linkedin"><span class="fa mr-1 fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 contact-form mt-md-0 mt-sm-5 mt-4">
+                        <h4 class="mb-4 w3f_title">Contact Form</h4>
+                        <form name="contactform" id="contactform" method="post" action="#" onsubmit="return(validate());" novalidate="novalidate">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" id="name" placeholder="Enter Email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label>How can we help?</label>
+                                <textarea name="issues" class="form-control" id="iq" placeholder="Enter Your Message Here"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                    <!-- map -->
+                    <div class="col-lg-4 contact-map mt-lg-0 mt-sm-5 mt-4">
+                        <h4 class="mb-4 w3f_title">Contact Map</h4>
+                        <div id="map"></div>
+                        <span class="fa mt-1 mr-1 fa-map-marker"></span>
+                        <srtong>EL Gomhorreya Street,<br> Mansoura, Dakahlia</srtong>
+                    </div>
+                    <script>
+                        mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhYTM0IiwiYSI6ImNrcXBsMW90bjB4bzIydW5wM201aThtNTkifQ.YUi4HIphgBFYQ5tdvRBnTw';
+                        const map = new mapboxgl.Map({
+                            container: 'map', // container ID
+                            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                            center: [31.769255599999994, 31.1691547], // starting position
+                            zoom: 9 // starting zoom
+                        });
+
+                        // Add zoom and rotation controls to the map.
+                        map.addControl(new mapboxgl.NavigationControl());
+                    </script>
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- //contact -->
+        <!-- footer -->
+        <footer class="footer py-5">
+            <div class="container pt-lg-4">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 footer-top">
+                        <h4 class="mb-4 w3f_title">Contact</h4>
+                        <ul class="list-w3">
+                            <li><span class="fa mr-1 fa-map-marker"></span>EL Gomhorreya Street,<br> Mansoura, Dakahlia </li>
+                            <li class="my-2"><span class="fa mr-1 fa-phone"></span>050 2203274</li>
+                            <li class="my-2"><span class="fa mr-1 fa-phone"></span>050 2203273</li>
+                            <li class=""><span class="fa mr-1 fa-envelope"></span><a href="mailto:info@bank.com">info@bank.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 footv3-left mt-sm-0 mt-4">
+                        <h4 class="mb-4 w3f_title"> Share Holders</h4>
+                        <ul class="list-w3">
+                            <li class="my-2">
+                                <a href="#">
+							Shareholders Information
+						</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#">
+							Stock Information
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							Financial Results
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							Investors faq's
+						</a>
+                            </li>
+                            <li>
+                                <a href="#">
+							Regulatory Section
+						</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 mt-lg-0 mt-sm-5 mt-4">
+                        <h4 class="mb-4 w3f_title">Media Center</h4>
+                        <ul class="list-w3">
+                            <li class="my-2">
+                                <a href="#">
+							Press Release
+						</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#">
+							Vision & Values
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							Winning Awards
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							Banking
+						</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-4 mt-lg-0 mt-sm-5 mt-4">
+                        <h4 class="mb-4 w3f_title">Resources</h4>
+                        <ul class="list-w3">
+                            <li class="my-2">
+                                <a href="#">
+							50/3 Help Line
+						</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#">
+							Nearest Branch
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							All Branches
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							Download
+						</a>
+                            </li>
+                            <li>
+                                <a href="#">
+							Guidance
+						</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-4 mt-lg-0 mt-sm-5 mt-4">
+                        <h4 class="mb-4 w3f_title">Other Links</h4>
+                        <ul class="list-w3">
+                            <li class="my-2">
+                                <a href="#">
+							Careers
+						</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#">
+							All faq's
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							Bank Group
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							Credit Cards
+						</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#">
+							Loans
+						</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!-- //footer bottom -->
+        </footer>
+        <!-- //footer -->
+
+        <!-- middle -->
+        <section class="middle py-4">
+            <div class="container">
+                <p><strong class="mr-2">Our Offerings & Calculators:</strong> Personal loans, Home and car loans, loan calculators, Savings accounts, Credit cards, Insurance.</p>
+                <p><strong class="mr-2">Bank Smart:</strong> Internet Banking, Online Banking, Cardless transactions, Fixed deposits, Pin generation, Card active status.</p>
+            </div>
+        </section>
+        <!-- //middle -->
+
+        <!-- copyright -->
+        <section class="copy-right py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="">© 2022 Bank Card. All rights reserved | Design by our team
+                        </p>
+                    </div>
+                    <div class="col-lg-5 mt-lg-0 mt-3">
+                        <ul class="list-w3 d-sm-flex">
+                            <li>
+                                <a href="#">
+							Privicy Policy
+						</a>
+                            </li>
+                            <li class="mx-sm-4 mx-3">
+                                <a href="#">
+							Terms & Conditions
+						</a>
+                            </li>
+                            <li>
+                                <a href="#">
+							Disclaimer.
+						</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //copyright -->
+
+        <!-- move top -->
+        <div class="move-top text-right">
+            <a href="#home" class="move-top">
+                <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- move top -->
+
+
+
+        <!-- map js -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+    </body>
+
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>portfolio-layout</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="Assets/Css/sheet-style.css">
+    <!-- <link rel="stylesheet" href="./animation.css" /> -->
+    <link rel="stylesheet" href="Assets/Css/all.min.css">
+    <link rel="stylesheet" href="Assets/Css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="Assets/img/home-logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400&display=swap" rel="stylesheet">
+    <!--DUALITE-IMAGE-PRELOAD-->
+
+</head>
+
+<body>
+    <header class="header d-flex flex-wrap align-items-center justify-content-between"
+        style="height: 120px;">
+        <div class="logo col-lg-1" style="height: 120px;">
+            <img src="Assets/img/logo 1.png" style="width: 140px; height: 100%;">
+        </div>
+        <div class="nav-bar mobile-menu d-lg-flex pe-lg-5 col-lg-8 justify-content-end">
+                <i class="fa-solid fa-bars fx-2"></i>
+            <ul class="nav-links">
+                <li><a class="active-link" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="banner-container">
+        <div class="banner-frame d-flex align-items-center justify-content-lg-around">
+            <div class="banner-left-side banner-text col-lg-5">
+                <div class="sub-title mb-3">
+                    <h1>Welcome!</h1>
+                </div>
+                <div class="horizontal-slider mb-5 d-flex align-items-center justify-content-lg-start">
+                    <div class="TEXT-54-25 slider-label">
+                        <p id="i_am">I am</p>
+                    </div>
+                    <ul class="d-flex align-items-center mb-0">
+                        <li>
+                            <p>Eslam Hesham</p>
+                        </li>
+                        <li>
+                            <p>Web Developer</p>
+                        </li>
+                        <li>
+                            <p>UI/UX</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="banner-bottom d-flex justify-content-lg-start gap-lg-5">
+                    <div class="demo-btn" style="z-index: 2;">
+                        <a href="#">View Work</a>
+                    </div>
+                    <div class="hire-btn">
+                        <a href="#">Hire Me!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-right-side banner-img col-lg-5">
+                <img src="Assets/img/avatar.png" width="100%">
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div id="section" class="about-section">
+            <!-- Vector Node as Base64 Image -->
+            <img id="id-Vector" className='VECTOR-54-438'
+                src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAB0kAAAA3CAYAAABpYHLuAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAmWSURBVHgB7d1BctpIFIDhhrHXQzaZZXT/VY7g3IDcQFknVaMsXcFouhFtGkUQ7MFYiO+rIiDAnkUqLtv/vNezjx//aQMAAAAAAADAdDXx9jCbhYfHx8fPdwEAAAAAAABgWpq2Dcu2bR9CWD/8+PHjS/miSAoAAAAAAABcvRhFH2IQTWH082q1+tpEh94rkgIAAAAAAADXZjMpemoU7RNJAQAAAAAAgLHbRNH5PHx+enpavjSK9omkAAAAAAAAwNg0aUJ0Pp8t1+v1l+/fvy/DGYmkAAAAAAAAwHtbtu36Id3/+vXroWmab+ENiaQAAAAAAADAJZ11de5riKTA1DTb262qAgAAAAAAjMtFp0RPIZLC9auHnmzb35+fzTb7uw8ExLaZzWaDr6Xn1+v10fAYP2997PX4OX7GL3z/hhON4QvkrVksFp9Ofe/9/f2H+Hf+95/eF//eq9e+Hj//Ir5jceAjq8OfczAUL7Y3AAAAAADeVh1vy/i72of3mhI9xezjx3/aAJyqP6WYxsGfr4ciZHyuLq+HYmL/uUNBUTiE8xoKw0MB+K+//lqs1+u9yDqfzxddyN2JXw+q8jr+W47v2Y+zAxG3fw0AAAAAcC02a3NDWC/j70wfHh8fv4wxiA4RSbl2e9Fyf3qyDI+7Kcn+VGT8R9s8PT3l1/px8ue1/GMGpqEMt0PBtpy+7Yfa/Ug7q/Y/bi/G7r0GAAAAAHCC5yAaRrQ297VEUi6hDJnF5OUuYuZpy37AzBOWvXgpXAKcSYyyKbJuQmw/ypZBtnycY2w5KRu/jpcrjasAAAAAAFyzSQXRISIph9Tb+03ULNfIDgXNoZhpNSzAbcsBtoyveXVxnoLNZ8/2gmu1/RRVAAAAAADe2uSD6BCRdHrq7X0vbnbrZofC5mq1yh9jQhOA0ckriO/u7qp0n0Nrnm7drRnurkVWAAAAADjoJoPoEJF0fPJq2u1a2ryStoucOWzmczQFTgA4LkXWPM06FFgHpljL1cEAAAAAcK3qeFvG33k9pMePj49LW0B3RNK3U6c/4i9d6/40Zw6d6b5YTytyAsCIlHE1XaewulsTvIurxXmsVQAAAACAy0t9qY6/t1rO57Pl09PTcrVafdWdjhNJT1OHvcnO/dW1YicAkB2aXM3nr/bWAptaBQAAAOAl6nhbtu16c3/L63L/r1uMpE1xS1U9ndtZ5+CZ1tjG+2+CJwBwKTGsLmJYrQ6tBBZWAQAAAG6O6dA3NpVIWqc/0mrbctIzTXiW0VNJBwCm4oUTq1UAAAAAYKxSDH1IMTQ4O/RixhxJN9OewicAwHmUYdUZqwAAAAAXV8dbDKHtMvUuq3Lf13tE0t/iZ/wFXZ3P9lytVvE5a24BAN7boTXAplUBAAAAjqpDcW5ovH2NQbTWvsbl3JF0sx85FGd95snPNBocxE8AgElL06p3d3dVetyfVnW2KgAAADAh26HA9iH3MJOh1+UlkbTZ3pZlADX9CQDAa71gBXAVRFUAAADg8jYDgvH3FUtnhk5LGUnr0BXvtAt5E0NNgAIAMCZlVE0rgONTVRdV2xhT55WoCgAAALxSHYoVuXlIUAydrln6RZO/YAAApujYuaq9qJrDKgAAADBde1Oh8fcETVqRGwwL3qRZAAAANo5F1fT/F6ZzVUVVAAAAGLXnEJo3p8bb1xhDayGUkkgKAACvlKJqvPv77u6uOhRV0/tiWE33VQAAAADOodnentfj5iMkbU/lVCIpAABcSBlV03UKqqIqAAAADPptItQ5oZyTSAoAACMWu+qnflRNj9s2RdTZ9vlNUM1rgAEAAOBa1PHWpBAaf7ZNQTRdW43LRYikAAAwISmq3t/ff0jnqqagOp/PF2lSNUXVeJ3uF9tzVasgqgIAAPC29tbixp9R6/i4Tmtx4/1PIZT3JJICAMANK6NqOlc1PlV1UbWNMXVeFVE1h1UAAAAo1aFbhdv0pkH/tRaXMRNJAQCAkx06VzU9tgIYAABgkmL4TCG0rXMEdTYoUyCSAgAAb8q0KgAAwGgV63BNgnJbRFIAAGBUhqZVna0KAADwKnW8NfHnqWUIbZPPBF2v199iBK2dCcotE0kBAICrl8Lq/f19ladV4w/8C2uAAQCAiatDNwVat+26TgE0/izUWIULpxFJAQCAm/SCsGpiFQAAuLQ6CKDwpkRSAACAE71wFbAzVgEAgL7NGaDx54Y6hHT2Z7cCNwXQ4BxQuCiRFAAA4I3Ftvrp/v7+Q39qNcXV+GPZoje1Kq4CAMD1ORg/8/RnfP2nM0BhPERSAACAEepPrYqrAADwLurt/TJ+H96InzAdIikAAMDEHJpcTa+Va4HTdQys6fkcWQEA4Bb8NvUZv0feRM8YQJv4/fM3a29h+kRSAAAANo5Nr6brFFi7d3bX28CaVAEAAN5XHbr4WfcnPoVPYIhICgAAwFmUE6zpOsfVP0yxJlUAAICdprg9R8+hac9g1S3wSiIpAAAAo5Aia7rvT7LGX4ItunNYB6dZ86pgK4MBAMarDt1626Zbb7v5Pq5O0TOf7Rkf/zTpCVySSAoAAMCknBZb0/1s0ZtsFVwBAI6r0x/pLM/4vVPTn/DsXhM8gesgkgIAAMAB+ZzWco1wjq7p8W6VcBddu4/qnutet1IYABident/cLIzXafYuVqt8nuttAUmRyQFAACAC+pPuiY5tg6tFj4w7ZpUAQC4RfmszsGJzhw607mdT09PjdAJMEwkBQAAgCuWp13T46Hwmu8T4RUARqFOf6TA2V22+X4wcubVtUHkBDgrkRQAAADY86fwOnS+6/YdxXvFVwAmZW96s3tqP252r3XPmeIEGD+RFAAAALiYvG740DmvAiwAZ/IcNcP27M3dWtrkcNgsJjcTcRNgokRSAAAAYBIOTcAeirBJXkHcmT0/7oXY8jEA51UXjzcxs3vYPj8fvyY/P85Bs3xcTGuG2DO/BQA4gUgKAAAA8AJljC0nYpPjQbacjE1mVfl5YwQor4VZ4L3V5cVuxezmqnz8PJGZz9LcfczufWXIDKYzARgBkRQAAABg5Mowm/TjbJLPjD10/Xuk3byrCj29WLv5zwfBFt5D3bsupiw3/1aL1bHPz+19TBkp+9e9lbKJcAnATRFJAQAAAHixfL5sqVxzXOoH26Q/aVvaX4O893nixxwOtgOBt+9PrzMt9bEX9ycjd4biY/FRz1OT+5+rrYf/G78/35uo3LAiFgAuTyQFAAAAgK3+1O4xQxO9LzUUkK/VoVB4ioGpxqNERQDg//oPO8qCuUUtHv8AAAAASUVORK5CYII="
+                style="position: absolute; left: 0px; top: 0px; width: 100%; height: 41.89192581176758px;"
+                alt="image" />
+            <!-- Base64 Ends -->
+            <div class="about-frame d-flex flex-wrap align-items-center justify-content-lg-around">
+                <div class="personal-image col-lg-5">
+                    <img src="Assets/img/avatar.png" width="100%">
+                </div>
+                <div class="frame col-lg-5">
+                    <div class="brief-field mb-5">
+                        <div class="head-title">
+                            <div id="id-Whoami" class="mb-2" style="text-transform: uppercase;">
+                                <span>Who am i</span>
+                            </div>
+                            <div class="frame-name mb-4">
+                                <div class="RECTANGLE-54-252">
+                                    <div class="personal-name">
+                                        <span>Eslam Hesham</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-title mb-3">
+                            <span>Professional Web Developer</span>
+                        </div>
+                        <div class="profile-info mb-5">
+                            <p>Nulla metus metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat condimentum
+                                velit class
+                                aptent taciti
+                                sociosqu ad litora torquent metus metus ullamcorper.</p>
+                            <p ">Nulla metus metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat condimentum velit class
+                                        aptent taciti
+                                        sociosqu ad litora torquent metus metus ullamcorper vel tincidunt sed class aptent
+                                        taciti sociosqu ad litora torquent type setting industry when per conubia
+                                        nostra.</p>
+                                </div>
+                                <div class=" buttons d-flex gap-lg-4">
+                            <div class="download-btn">
+                                <a href="#">Download CV</a>
+                            </div>
+                            <div class="hire-btn">
+                                <a href="#">Hire Me!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <div class="section-header">
+                            <h5 id="id-Skills-0" class="border-bottom border-white" style="
+                        font-size:28px;
+                        font-weight:400;
+                        text-transform:uppercase;
+                        white-space:nowrap;
+                        line-height: 36.400001525878906px;
+                    letter-spacing: 2px;
+                    color: rgba(255,255,255,1.00);
+                    ;font-family: Sora;
+                    font-style: Regular;
+                    ">Skills</h5>
+                        </div>
+                        <div class="skills-frame d-flex flex-wrap align-items-center px-lg-4 pt-5">
+                            <div class="skill-card d-flex flex-wrap col-lg-5">
+                                <div class="skill-content col-10">
+                                    <span id="id-Development-0" style="
+                                        font-size:18px;
+                                        font-weight:400;
+                                        text-transform:none;
+                                        white-space:nowrap;
+                                        line-height: 21.600000381469727px;
+                                        letter-spacing: 0px;
+                                        color: rgba(255,255,255,1.00);
+                                        font-family: Sora;
+                                        font-style: Regular;
+                                        ">Development</span>
+                                </div>
+                                <div class="percentage-label col-2 d-flex flex-column">
+                                    <span id="id-90%-0" style="
+                                        font-size:11px;
+                                        font-weight:400;
+                                        text-transform:none;
+                                        white-space:nowrap;
+                                        line-height: 18px;
+                                        letter-spacing: 0px;
+                                        color: rgba(255,255,255,1.00);
+                                        font-family: Sora;
+                                        font-style: Regular;
+                                        ">90%</span>
+                                </div>
+                                <progress id="file" value="90" max="100"> 90% </progress>
+                            </div>
+                            <div class="skill-card d-flex flex-wrap col-lg-5">
+                                <div class="skill-content col-10">
+                                    <span id="id-Development-0" style="
+                                        font-size:18px;
+                                        font-weight:400;
+                                        text-transform:none;
+                                        white-space:nowrap;
+                                        line-height: 21.600000381469727px;
+                                        letter-spacing: 0px;
+                                        color: rgba(255,255,255,1.00);
+                                        font-family: Sora;
+                                        font-style: Regular;
+                                        ">WordPress</span>
+                                </div>
+                                <div class="percentage-label col-2 d-flex flex-column">
+                                    <span id="id-90%-0" style="
+                                        font-size:11px;
+                                        font-weight:400;
+                                        text-transform:none;
+                                        white-space:nowrap;
+                                        line-height: 18px;
+                                        letter-spacing: 0px;
+                                        color: rgba(255,255,255,1.00);
+                                        font-family: Sora;
+                                        font-style: Regular;
+                                        ">78%</span>
+                                </div>
+                                <progress id="file" value="78" max="100"> 78% </progress>
+                            </div>
+                            <div class="skill-card d-flex flex-wrap col-lg-5">
+                                <div class="skill-content col-10">
+                                    <span id="id-Development-0" style="
+                                        font-size:18px;
+                                        font-weight:400;
+                                        text-transform:none;
+                                        white-space:nowrap;
+                                        line-height: 21.600000381469727px;
+                                        letter-spacing: 0px;
+                                        color: rgba(255,255,255,1.00);
+                                        font-family: Sora;
+                                        font-style: Regular;
+                                        ">Mobile App</span>
+                                </div>
+                                <div class="percentage-label col-2 d-flex flex-column">
+                                    <span id="id-90%-0" style="
+                                        font-size:11px;
+                                        font-weight:400;
+                                        text-transform:none;
+                                        white-space:nowrap;
+                                        line-height: 18px;
+                                        letter-spacing: 0px;
+                                        color: rgba(255,255,255,1.00);
+                                        font-family: Sora;
+                                        font-style: Regular;
+                                        ">48%</span>
+                                </div>
+                                <progress id="file" value="48" max="100"> 48% </progress>
+                            </div>
+                            <div class="skill-card d-flex flex-wrap col-lg-5">
+                                <div class="skill-content col-10">
+                                    <span id="id-Development-0" style="
+                                        font-size:18px;
+                                        font-weight:400;
+                                        text-transform:none;
+                                        white-space:nowrap;
+                                        line-height: 21.600000381469727px;
+                                        letter-spacing: 0px;
+                                        color: rgba(255,255,255,1.00);
+                                        font-family: Sora;
+                                        font-style: Regular;
+                                        ">UI / UX Design</span>
+                                </div>
+                                <div class="percentage-label col-2 d-flex flex-column">
+                                    <span id="id-90%-0" style="
+                                        font-size:11px;
+                                        font-weight:400;
+                                        text-transform:none;
+                                        white-space:nowrap;
+                                        line-height: 18px;
+                                        letter-spacing: 0px;
+                                        color: rgba(255,255,255,1.00);
+                                        font-family: Sora;
+                                        font-style: Regular;
+                                        ">58%</span>
+                                </div>
+                                <progress id="file" value="58" max="100"> 8% </progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Vector Node as Base64 Image -->
+            <img id="id-Vector" className='VECTOR-54-442'
+            src="data:image/png;base64, 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"
+            style="z-index:2; position: absolute; left: 0px; bottom: -51px; width: 100%; height:50.99980545043945px;"
+            alt="image" />
+        <!-- Base64 Ends -->
+        </div>
+        <div id="section" class="service-section">
+            <div class="section-frame-header">
+                <span>Services</span>
+            </div>
+            <div class="horizontal-container d-flex flex-wrap justify-content-center align-items-center gap-lg-5">
+                <div class="service-frame col-lg-2">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h2>
+                        Web Design
+                    </h2>
+                    <p>
+                        Nulla metus metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat
+                    </p>
+                </div>
+                <div class="service-frame col-lg-2">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h2>
+                        Development
+                    </h2>
+                    <p>
+                        Nulla metus metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat
+                    </p>
+                </div>
+                <div class="service-frame col-lg-2">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <h2>
+                        UI/UX Design
+                    </h2>
+                    <p>
+                        Nulla metus metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat
+                    </p>
+                </div>
+                <div class="service-frame col-lg-2">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                    </div>
+                    <h2>
+                        Web Consulting
+                    </h2>
+                    <p>
+                        Nulla metus metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="section" class="portfolio-section">
+            <!-- Vector Node as Base64 Image-->
+            <img id="id-Vector" className='VECTOR-54-438'
+                src="data:image/png;base64, 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"
+                style="position: absolute; left: 0px; top: 0px; width: 100%; height: 41.89192581176758px;"
+                alt="image" />
+            <!-- Base64 Ends -->
+            <div class="section-frame-header">
+                <span>Portfolio</span>
+            </div>
+            <div class="tab-bar">
+                <ul class="d-flex align-items-center justify-content-center gap-lg-3">
+                    <li class="category-li active-category">All</li>
+                    <li class="category-li">Design</li>
+                    <li class="category-li">Development</li>
+                    <li class="category-li">Aplication</li>
+                </ul>
+            </div>
+            <div class="projects-field">
+                <div class="project-card d-flex align-items-center gap-lg-5" data-project="learningSystem">
+                    <div class="project-thumbnail col-lg-4">
+                        <a href="Assets/Template4/Learning_System.html">
+                            <img src="Assets/img/Learning System.png"
+                                alt="./4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.webp"
+                                style="width: 100%; height: 235px;object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="project-content col-lg-6">
+                        <h2 class="content-title">
+                            Learning System
+                        </h2>
+                        <h5 class="content-subtitle">Design</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime magni ducimus
+                            dolores saepe praesentium aliquam sit, minima vitae doloribus ea quibusdam voluptates dolore
+                            suscipit, sequi corporis quae sed laborum!</p>
+                    </div>
+                </div>
+                <div class="project-card d-flex align-items-center gap-lg-5" data-project="hourseClub">
+                    <div class="project-thumbnail col-lg-4">
+                        <a href="Assets/Template1/Template1/index.html">
+                            <img src="Assets/img/Hourse Club.png"
+                                style="width: 100%; height: 235px;object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="project-content col-lg-6">
+                        <h2 class="content-title">
+                            Hourse Club
+                        </h2>
+                        <h5 class="content-subtitle">Development</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime magni ducimus
+                            dolores saepe praesentium aliquam sit, minima vitae doloribus ea quibusdam voluptates dolore
+                            suscipit, sequi corporis quae sed laborum!</p>
+                    </div>
+                </div>
+                <div class="project-card d-flex align-items-center gap-lg-5" data-project="bankWebSite">
+                    <div class="project-thumbnail col-lg-4">
+                        <a href="Assets/Template1/SWpro/index.html">
+                            <img src="Assets/img/Bank.png"
+                                style="width: 100%; height: 235px;object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="project-content col-lg-6">
+                        <h2 class="content-title">
+                            Bank Website
+                        </h2>
+                        <h5 class="content-subtitle">Design</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime magni ducimus
+                            dolores saepe praesentium aliquam sit, minima vitae doloribus ea quibusdam voluptates dolore
+                            suscipit, sequi corporis quae sed laborum!</p>
+                    </div>
+                </div>
+                <div class="project-card d-flex align-items-center gap-lg-5" data-project="modernLabs">
+                    <div class="project-thumbnail col-lg-4">
+                        <a href="Assets/doccure-doctor-appointment-booking-bootstrap-template-admin-dashboard/index.html">
+                            <img src="Assets/img/medic-template.png"
+                                alt="./4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.webp"
+                                style="width: 100%; height: 235px;object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="project-content col-lg-6">
+                        <h2 class="content-title">
+                            Modern Labs
+                        </h2>
+                        <h5 class="content-subtitle">Development</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime magni ducimus
+                            dolores saepe praesentium aliquam sit, minima vitae doloribus ea quibusdam voluptates dolore
+                            suscipit, sequi corporis quae sed laborum!</p>
+                    </div>
+                </div>
+                <div class="project-card d-flex align-items-center gap-lg-5" data-project="learningSystem">
+                    <div class="project-thumbnail col-lg-4">
+                        <a href="Assets/Template4/Learning_System.html">
+                            <img src="Assets/img/Learning System.png"
+                                alt="./4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.webp"
+                                style="width: 100%; height: 235px;object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="project-content col-lg-6">
+                        <h2 class="content-title">
+                            Learning System
+                        </h2>
+                        <h5 class="content-subtitle">Design</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime magni ducimus
+                            dolores saepe praesentium aliquam sit, minima vitae doloribus ea quibusdam voluptates dolore
+                            suscipit, sequi corporis quae sed laborum!</p>
+                    </div>
+                </div>
+                <div class="project-card d-flex align-items-center gap-lg-5" data-project="bookingApp">
+                    <div class="project-thumbnail col-lg-4">
+                        <a href="Assets/Template4/Learning_System.html">
+                            <img src="Assets/img/UI App.png"
+                                style="width: 100%; height: 235px;object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="project-content col-lg-6">
+                        <h2 class="content-title">
+                            Booking App
+                        </h2>
+                        <h5 class="content-subtitle">Design</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime magni ducimus
+                            dolores saepe praesentium aliquam sit, minima vitae doloribus ea quibusdam voluptates dolore
+                            suscipit, sequi corporis quae sed laborum!</p>
+                    </div>
+                </div>
+            </div>
+                <!-- Vector Node as Base64 Image -->
+            <img id="id-Vector" className='VECTOR-54-442'
+            src="data:image/png;base64, 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"
+            style="z-index:2; position: absolute; left: 0px; bottom: -51px; width:100%; height:50.99980545043945px;"
+            alt="image" />
+        <!-- Base64 Ends -->
+        </div>
+        <div id="section" class="contact-section">
+            <div class="section-frame-header">
+                <span>Contact Us</span>
+            </div>
+            <div class="contact-frame d-flex flex-wrap align-items-center justify-content-lg-center">
+                <div class="contact-left-side col-lg-6 col-sm-12">
+                    <div class="contact-info phone-field">
+                        <h5>
+                            PHONE:
+                        </h5>
+                        <p>
+                            +20 010 3351 4984
+                        </p>
+                    </div>
+                    <div class="contact-info address-field">
+                        <h5>
+                            ADDRESS:
+                        </h5>
+                        <p>
+                            27rd Elsalam Street, Met Ghamr<br />
+                            Mansoura
+                        </p>
+                    </div>
+                    <div class="contact-info email-field">
+                        <h5>
+                            EMAIL:
+                        </h5>
+                        <p>
+                            email_support@youradress.com
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-right-side col-lg-6 col-sm-12">
+                    <form class="d-flex flex-wrap">
+                        <input class="input-field col-lg-5" type="text" placeholder="Name" required>
+                        <input class="input-field col-lg-5" type="text" placeholder="Email" required>
+                        <input class="input-field col-lg-12 type=" text" placeholder="Subject" required>
+                        <textarea class="input-field message-box col-lg-12" cols="30" rows="10"
+                            placeholder="Message"></textarea>
+                        <button class="send-btn col-lg-12">
+                            <span class="col-lg-4">send message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- Vector Node as Base64 Image-->
+        <img id="id-Vector" className='VECTOR-54-438'
+        src="data:image/png;base64, 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"
+        style="position: absolute; left: 0px; top: 0px; width: 100%; height: 41.89192581176758px;"
+        alt="image" />
+    <!-- Base64 Ends -->
+        <div class="footer-frame text-center">
+            <div class="footer-logo" style="height: 120px;">
+                <img src="Assets/img/logo 1.png" style="width: 140px; height: 100%;">
+            </div>
+            <div class="right-reserved">
+                <span style="
+            font-size:12px;
+            font-weight:400;
+            text-transform:uppercase;
+            white-space:nowrap;
+            line-height: 21.600000381469727px;
+letter-spacing: 2px;
+color: rgba(153,153,153,1.00);
+font-family: Rubik;
+font-style: Regular;
+">© 2018 UI-ThemeZ. All Rights Reserved.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor">
+        <img src="Assets/img/bg.jpg">
+    </div>
+
+    <!-- jQuery -->
+    <script src="Assets/javascript/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="Assets/javascript/popper.min.js"></script>
+    <script src="Assets/javascript/bootstrap.min.js"></script>
+
+    <script src="Assets/javascript/cursor.js"></script>
+    
+</body>
+
+</html>

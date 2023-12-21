@@ -1,0 +1,21 @@
+.header-nav{
+    justify-content: space-between;
+}
+.main-menu-wrapper {
+    flex: 1 1 50px;
+}
+.header-navbar-rht {
+    flex: 1 1 -1px;
+} 
+.doctor-widget {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    justify-content: space-between;
+}
+.doc-info-left {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    flex: 1;
+}

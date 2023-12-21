@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- doccure/  30 Nov 2019 04:11:34 GMT -->
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Doccure</title>
+
+	<!-- Favicons -->
+	<link type="image/x-icon" href="assets/img/favicon.png" rel="icon">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="assets/css/style-rtl.css">
+	</link>
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+
+	<!-- Main Wrapper -->
+	<div class="main-wrapper">
+
+		<!-- Header -->
+		<header class="header">
+			<nav class="navbar navbar-expand-lg header-nav">
+				<div class="navbar-header">
+					<a id="mobile_btn" href="javascript:void(0);">
+						<span class="bar-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</a>
+					<a href="index-2.html" class="navbar-brand logo">
+						<img src="assets/img/Logo.jpg" class="img-fluid" alt="Logo">
+					</a>
+				</div>
+				<div class="main-menu-wrapper">
+					<div class="menu-header">
+						<a href="index-2.html" class="menu-logo">
+							<img src="assets/img/Logo.jpg" class="img-fluid" alt="Logo">
+						</a>
+						<a id="menu_close" class="menu-close" href="javascript:void(0);">
+							<i class="fas fa-times"></i>
+						</a>
+					</div>
+					<ul class="main-nav">
+						<li class="active">
+							<a href="index-2.html" data-i18n="home">Home</a>
+						</li>
+						<li class="has-submenu">
+							<a href="#about" data-i18n="about">About</a>
+						</li>
+						<li class="has-submenu">
+							<a href="#" data-i18n="patients">Patients <i class="fas fa-chevron-down"></i></a>
+							<ul class="submenu">
+								<li><a href="search.html" data-i18n="searchDoctor">Search Doctor</a></li>
+								<li><a href="booking.html" data-i18n="booking">Booking</a></li>
+								<li><a href="favourites.html" data-i18n="favourites">Favourites</a></li>
+								<li><a href="chat.html" data-i18n="chat">Chat</a></li>
+								<li><a href="profile-settings.html" data-i18n="profileSettings">Profile Settings</a>
+								</li>
+							</ul>
+						</li>
+						<li class="has-submenu">
+							<a href="#" data-i18n="pages">Pages <i class="fas fa-chevron-down"></i></a>
+							<ul class="submenu">
+								<li><a href="voice-call.html" data-i18n="voiceCall">Voice Call</a></li>
+								<li><a href="calendar.html" data-i18n="calender">Calendar</a></li>
+							</ul>
+						</li>
+						<select class="border-0 select_outline" id="">
+							<option value="en" data-i18n="english" selected>English</option>
+							<option value="ar" data-i18n="arabic">Arabic</option>
+						</select>
+					</ul>
+				</div>
+				<ul class="nav header-navbar-rht">
+					<li class="nav-item contact-item">
+						<div class="header-contact-img">
+							<i class="far fa-hospital ml-2"></i>
+						</div>
+						<div class="header-contact-detail">
+							<p class="contact-header" data-i18n="contact">Contact</p>
+							<p class="contact-info-header" data-i18n="phoneNumber"> +1 315 369 5943</p>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link header-login" data-i18n="signup" href="login.html">login / Signup </a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- /Header -->
+
+		<!-- Home Banner -->
+		<section class="section section-search">
+			<div class="container-fluid">
+				<div class="banner-wrapper">
+					<div class="banner-header text-center">
+						<h1 data-i18n="searchDoc">Search Doctor, Make an Appointment</h1>
+						<p data-i18n="searchDoctorText">Discover the best doctors, clinic & hospital the city nearest to
+							you.</p>
+					</div>
+
+					<!-- Search -->
+					<div class="search-box">
+						<form action="templateshub.net">
+							<div class="form-group search-location">
+								<input type="text" class="form-control" id="location-search"
+									placeholder="Search Location">
+								<span class="form-text" data-i18n="basedOnYourLocation">Based on your Location</span>
+							</div>
+							<div class="form-group search-info">
+								<input type="text" class="form-control" id="dental-search"
+									placeholder="Search Doctors, Clinics, Hospitals, Diseases Etc">
+								<span class="form-text" data-i18n="exDentalOrSurgery">Ex : Dental or Sugar Check up
+									etc</span>
+							</div>
+							<button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i>
+								<span data-i18n="search">Search</span></button>
+						</form>
+						<section class="table__body" id="table-container">
+							<table>
+								<thead>
+									<tr>
+										<th> Id <span class="icon-arrow">&UpArrow;</span></th>
+										<th> Doctor <span class="icon-arrow">&UpArrow;</span></th>
+										<th> Status <span class="icon-arrow">&UpArrow;</span></th>
+										<th> Amount <span class="icon-arrow">&UpArrow;</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> 1 </td>
+										<td> Dr.Mohamed Elsherif </td>
+										<td>
+											<p class="status delivered">Delivered</p>
+										</td>
+										<td> <strong> $128.90 </strong></td>
+									</tr>
+									<tr>
+										<td> 2 </td>
+										<td> Dr.Alshaymaa Hosni </td>
+										<td>
+											<p class="status cancelled">Cancelled</p>
+										</td>
+										<td> <strong>$5350.50</strong> </td>
+									</tr>
+									<tr>
+										<td> 3</td>
+										<td> Dr.Maged Habashy </td>
+										<td>
+											<p class="status shipped">Shipped</p>
+										</td>
+										<td> <strong>$210.40</strong> </td>
+									</tr>
+									<tr>
+										<td> 4</td>
+										<td> Dr.Ahmed salem </td>
+										<td>
+											<p class="status delivered">Delivered</p>
+										</td>
+										<td> <strong>$149.70</strong> </td>
+									</tr>
+									<tr>
+										<td> 5</td>
+										<td> Dr.Ahmed Mohamed </td>
+										<td>
+											<p class="status pending">Pending</p>
+										</td>
+										<td> <strong>$399.99</strong> </td>
+									</tr>
+									<tr>
+										<td> 6</td>
+										<td> Dr.Reem Fouad </td>
+										<td>
+											<p class="status cancelled">Cancelled</p>
+										</td>
+										<td> <strong>$399.99</strong> </td>
+									</tr>
+									<tr>
+										<td> 7</td>
+										<td> Dr.Magdy Refaat </td>
+										<td>
+											<p class="status delivered">Delivered</p>
+										</td>
+										<td> <strong>$399.99</strong> </td>
+									</tr>
+									<tr>
+										<td> 8</td>
+										<td> Dr.Mohamed Omar </td>
+										<td>
+											<p class="status pending">Pending</p>
+										</td>
+										<td> <strong>$149.70</strong> </td>
+									</tr>
+									<tr>
+										<td> 9</td>
+										<td> Dr.Sami Tarek </td>
+										<td>
+											<p class="status cancelled">Cancelled</p>
+										</td>
+										<td> <strong>$249.99</strong> </td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+
+					</div>
+					<!-- /Search -->
+
+				</div>
+			</div>
+		</section>
+		<!-- /Home Banner -->
+
+		<!-- Clinic and Specialities -->
+		<section class="section section-specialities" id="about">
+			<div class="container-fluid">
+				<div class="section-header text-center">
+					<h2 data-i18n="clinicAndSpecialities">Clinic and Specialities</h2>
+					<p class="sub-title" data-i18n="specialitiesSubTitle">We discover multiple specialities to
+						facilitate on our patient search and consultations without losing time</p>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-9">
+						<!-- Slider -->
+						<div class="specialities-slider slider">
+
+							<!-- Slider Item -->
+							<div class="speicality-item text-center">
+								<div class="speicality-img">
+									<img src="assets/img/specialities/specialities-01.png" class="img-fluid"
+										alt="Speciality">
+									<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+								</div>
+								<p>Urology</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="speicality-item text-center">
+								<div class="speicality-img">
+									<img src="assets/img/specialities/specialities-02.png" class="img-fluid"
+										alt="Speciality">
+									<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+								</div>
+								<p>Neurology</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="speicality-item text-center">
+								<div class="speicality-img">
+									<img src="assets/img/specialities/specialities-03.png" class="img-fluid"
+										alt="Speciality">
+									<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+								</div>
+								<p>Orthopedic</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="speicality-item text-center">
+								<div class="speicality-img">
+									<img src="assets/img/specialities/specialities-04.png" class="img-fluid"
+										alt="Speciality">
+									<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+								</div>
+								<p>Cardiologist</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="speicality-item text-center">
+								<div class="speicality-img">
+									<img src="assets/img/specialities/specialities-05.png" class="img-fluid"
+										alt="Speciality">
+									<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+								</div>
+								<p>Dentist</p>
+							</div>
+							<!-- /Slider Item -->
+
+						</div>
+						<!-- /Slider -->
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Clinic and Specialities -->
+
+		<!-- Popular Section -->
+		<section class="section section-doctor">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="section-header ">
+							<h2 data-i18n="bookOurDoctor">Book Our Doctor</h2>
+							<p data-i18n="docBreif">You will be handled by a team of expert doctors who have more than
+								10 years experience in their
+								fields and will get the best solution for problem</p>
+						</div>
+						<div class="about-content">
+							<p data-i18n="aboutContentTop">Remote health monitoring platform to create
+								a bright smile,healthy lifestyle and get fast
+								medical services to treat your health.</p>
+							<p data-i18n="aboutContentBottom">Modernlabs is a free service that lets you speak with
+								doctors
+								live over video chat.With carefully, you can get more
+								information, be more active in your own healthcare,
+								and help reduce wait times at hospitals & clinics.</p>
+							<a href="javascript:;" data-i18n="readMore">Read More..</a>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="doctor-slider slider">
+
+							<!-- Doctor Widget -->
+							<div class="profile-widget">
+								<div class="doc-img">
+									<a href="doctor-profile.html">
+										<img class="img-fluid" alt="User Image" src="assets/img/doctors/dentist1.jpg">
+									</a>
+									<a href="javascript:void(0)" class="fav-btn">
+										<i class="far fa-bookmark"></i>
+									</a>
+								</div>
+								<div class="pro-content">
+									<h3 class="title">
+										<a href="doctor-profile.html" data-i18n="drBashayerMahmoudElMansy">Dr. Bashayer
+											Mahmoud El Mansy</a>
+										<i class="fas fa-check-circle verified"></i>
+									</h3>
+									<p class="speciality" data-i18n="cosmeticAndOrthodonticSpecialist">Cosmetic and
+										orthodontic specialist</p>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<span class="d-inline-block average-rating">(17)</span>
+									</div>
+									<ul class="available-info">
+										<li>
+											<div>
+												<i class="fas fa-map-marker-alt mr-2"></i>
+												<span class="doc-location"
+													data-i18n="dentistFemaleDoctorAddress">El-Mansoura : el gamaa
+													square</span>
+											</div>
+										</li>
+										<li>
+											<i class="far fa-clock"></i> Available on Fri, 22 Mar
+										</li>
+										<li>
+											<i class="far fa-money-bill-alt"></i><span
+												data-i18n="dentistFemaleDoctorPrice">EGP 300 - EGP
+												450</span>
+										</li>
+										</li>
+									</ul>
+									<div class="row row-sm">
+										<div class="col-6">
+											<a href="doctor-profile.html" class="btn view-btn"
+												data-i18n="viewProfile">View Profile</a>
+										</div>
+										<div class="col-6">
+											<a href="booking.html" class="btn book-btn" data-i18n="bookNow">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+
+							<!-- Doctor Widget -->
+							<div class="profile-widget">
+								<div class="doc-img">
+									<a href="doctor-profile.html">
+										<img class="img-fluid" alt="User Image" src="assets/img/doctors/dentist3.jpg">
+									</a>
+									<a href="javascript:void(0)" class="fav-btn">
+										<i class="far fa-bookmark"></i>
+									</a>
+								</div>
+								<div class="pro-content">
+									<h3 class="title">
+										<a href="doctor-profile.html" data-i18n="drMohamedHejazy">Dr. Mohamed Hejazy</a>
+										<i class="fas fa-check-circle verified"></i>
+									</h3>
+									<p class="speciality" data-i18n="oralAndDentalSurgerySpecialist">Oral and Dental
+										Surgery Specialist</p>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star"></i>
+										<span class="d-inline-block average-rating">(35)</span>
+									</div>
+									<ul class="available-info">
+										<li>
+											<div>
+												<i class="fas fa-map-marker-alt"></i>
+												<span class="doc-location" data-i18n="oralMaleDoctorAddress">Mit Ghamr :
+													Elgesh street elnile tower</span>
+											</div>
+										</li>
+										<li>
+											<i class="far fa-clock"></i> Available on Fri, 22 Mar
+										</li>
+										<li>
+											<i class="far fa-money-bill-alt"></i><span
+												data-i18n="oralMaleDoctorPrice">EGP 60 - EGP 300</span>
+										</li>
+									</ul>
+									<div class="row row-sm">
+										<div class="col-6">
+											<a href="doctor-profile.html" class="btn view-btn"
+												data-i18n="viewProfile">View Profile</a>
+										</div>
+										<div class="col-6">
+											<a href="booking.html" class="btn book-btn" data-i18n="bookNow">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+
+							<!-- Doctor Widget -->
+							<div class="profile-widget">
+								<div class="doc-img">
+									<a href="doctor-profile.html">
+										<img class="img-fluid" alt="User Image"
+											src="assets/img/doctors/orthopedic2.jpg">
+									</a>
+									<a href="javascript:void(0)" class="fav-btn">
+										<i class="far fa-bookmark"></i>
+									</a>
+								</div>
+								<div class="pro-content">
+									<h3 class="title">
+										<a href="doctor-profile.html" data-i18n="drMarwaIbrahimElKattabi">Dr. Marwa
+											Ibrahim ElKhattabi</a>
+										<i class="fas fa-check-circle verified"></i>
+									</h3>
+									<p class="speciality" data-i18n="consultntOpthalmology">M.D. and Consultant
+										Ophthalmology</p>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star"></i>
+										<span class="d-inline-block average-rating">(27)</span>
+									</div>
+									<ul class="available-info">
+										<li>
+											<i class="fas fa-map-marker-alt"></i><span
+												data-i18n="ophthalmologyFemaleDoctorAddress">El-Mansoura : Talkha Salah
+												Salem Street</span>
+										</li>
+										<li>
+											<i class="far fa-clock"></i> Available on Fri, 22 Mar
+										</li>
+										<li>
+											<i class="far fa-money-bill-alt"></i><span
+												data-i18n="ophthalmologyFemaleDoctorPrice">EGP 170 - EGP 400</span>
+										</li>
+									</ul>
+									<div class="row row-sm">
+										<div class="col-6">
+											<a href="doctor-profile.html" class="btn view-btn"
+												data-i18n="viewProfile">View Profile</a>
+										</div>
+										<div class="col-6">
+											<a href="booking.html" class="btn book-btn" data-i18n="bookNow">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+
+							<!-- Doctor Widget -->
+							<div class="profile-widget">
+								<div class="doc-img">
+									<a href="doctor-profile.html">
+										<img class="img-fluid" alt="User Image" src="assets/img/doctors/urology.jpg">
+									</a>
+									<a href="javascript:void(0)" class="fav-btn">
+										<i class="far fa-bookmark"></i>
+									</a>
+								</div>
+								<div class="pro-content">
+									<h3 class="title">
+										<a href="doctor-profile.html" data-i18n="drKhaledElShafeiEid">Dr. Khaled El
+											Shafei Eid</a>
+										<i class="fas fa-check-circle verified"></i>
+									</h3>
+									<p class="speciality" data-i18n="consultantUrologist">consultant urologist</p>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star"></i>
+										<span class="d-inline-block average-rating">(49)</span>
+									</div>
+									<ul class="available-info">
+										<li>
+											<div>
+												<i class="fas fa-map-marker-alt"></i>
+												<span class="doc-location"
+													data-i18n="urologistFemaleDoctorAddress">El-Mansoura : port saeed
+													st Abo Soad building</span>
+											</div>
+										</li>
+										<li>
+											<i class="far fa-clock"></i> Available on Fri, 22 Mar
+										</li>
+										<li>
+											<i class="far fa-money-bill-alt"></i><span
+												data-i18n="urologistFemaleDoctorPrice">EGP 150 - EGP
+												250</span>
+										</li>
+									</ul>
+									<div class="row row-sm">
+										<div class="col-6">
+											<a href="doctor-profile.html" class="btn view-btn"
+												data-i18n="viewProfile">View Profile</a>
+										</div>
+										<div class="col-6">
+											<a href="booking.html" class="btn book-btn" data-i18n="bookNow">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+
+							<!-- Doctor Widget -->
+							<div class="profile-widget">
+								<div class="doc-img">
+									<a href="doctor-profile.html">
+										<img class="img-fluid" alt="User Image" src="assets/img/doctors/orthopedic.jpg">
+									</a>
+									<a href="javascript:void(0)" class="fav-btn">
+										<i class="far fa-bookmark"></i>
+									</a>
+								</div>
+								<div class="pro-content">
+									<h3 class="title">
+										<a href="doctor-profile.html" data-i18n="drRehamMagdyShaat">Dr. reham magdy
+											shaat</a>
+										<i class="fas fa-check-circle verified"></i>
+									</h3>
+									<p class="speciality" data-i18n="consultantOfRheumatology">Consultant of
+										Rheumatology, Rehabilitation and
+										Treatment of Obesity.</p>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star"></i>
+										<span class="d-inline-block average-rating">(52)</span>
+									</div>
+									<ul class="available-info">
+										<li>
+											<div>
+												<i class="fas fa-map-marker-alt"></i>
+												<span class="doc-location"
+													data-i18n="orhopedicFemaleDoctorAddress">El-Mansoura : bank misr
+													street</span>
+											</div>
+										</li>
+										<li>
+											<i class="far fa-clock"></i> Available on Fri, 22 Mar
+										</li>
+										<li>
+											<i class="far fa-money-bill-alt"></i><span
+												data-i18n="orhopedicFemaleDoctorPrice">EGP 100 - EGP
+												500</span>
+										</li>
+									</ul>
+									<div class="row row-sm">
+										<div class="col-6">
+											<a href="doctor-profile.html" class="btn view-btn"
+												data-i18n="viewProfile">View Profile</a>
+										</div>
+										<div class="col-6">
+											<a href="booking.html" class="btn book-btn" data-i18n="bookNow">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+
+							<!-- Doctor Widget -->
+							<div class="profile-widget">
+								<div class="doc-img">
+									<a href="doctor-profile.html">
+										<img class="img-fluid" alt="User Image" src="assets/img/doctors/neurology1.jpg">
+									</a>
+									<a href="javascript:void(0)" class="fav-btn">
+										<i class="far fa-bookmark"></i>
+									</a>
+								</div>
+								<div class="pro-content">
+									<h3 class="title">
+										<a href="doctor-profile.html" data-i18n="drRaniaYehiaHelal">Dr. Rania Yehia
+											Helal</a>
+										<i class="fas fa-check-circle verified"></i>
+									</h3>
+									<p class="speciality" data-i18n="consultantNeurologyAndSpine">PhD - consultant
+										neurology and spine Master's
+										degree in Neuropsychiatry Lecturer of Neurology.</p>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star"></i>
+										<span class="d-inline-block average-rating">(42)</span>
+									</div>
+									<ul class="available-info">
+										<li>
+											<div>
+												<i class="fas fa-map-marker-alt"></i>
+												<span class="doc-location"
+													data-i18n="neurologistFemaleDoctorAddress">Mit
+													Ghamr : el geish street</span>
+											</div>
+										</li>
+										<li>
+											<i class="far fa-clock"></i> Available on Fri, 22 Mar
+										</li>
+										<li>
+											<i class="far fa-money-bill-alt"></i><span
+												data-i18n="neurologistFemaleDoctorPrice">EGP 100 - EGP
+												500</span>
+										</li>
+									</ul>
+									<div class="row row-sm">
+										<div class="col-6">
+											<a href="doctor-profile.html" class="btn view-btn"
+												data-i18n="viewProfile">View Profile</a>
+										</div>
+										<div class="col-6">
+											<a href="booking.html" class="btn book-btn" data-i18n="bookNow">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+
+							<!-- Doctor Widget -->
+							<div class="profile-widget">
+								<div class="doc-img">
+									<a href="doctor-profile.html">
+										<img class="img-fluid" alt="User Image" src="assets/img/doctors/neurology2.jpg">
+									</a>
+									<a href="javascript:void(0)" class="fav-btn">
+										<i class="far fa-bookmark"></i>
+									</a>
+								</div>
+								<div class="pro-content">
+									<h3 class="title">
+										<a href="doctor-profile.html" data-i18n="drAhmedEffat">Dr. Ahmed Effat</a>
+										<i class="fas fa-check-circle verified"></i>
+									</h3>
+									<p class="speciality" data-i18n="consultantOfNeurology">Consultant of neurology</p>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star"></i>
+										<span class="d-inline-block average-rating">(50)</span>
+									</div>
+									<ul class="available-info">
+										<li>
+											<div>
+												<i class="fas fa-map-marker-alt"></i>
+												<span class="doc-location"
+													data-i18n="neurologistMaleDoctorAddress">El-Mansoura : Jihan Street
+												</span>
+											</div>
+										</li>
+										<li>
+											<i class="far fa-clock"></i> Available on Fri, 22 Mar
+										</li>
+										<li>
+											<i class="far fa-money-bill-alt"></i><span
+												data-i18n="neurologistMaleDoctorPrice">EGP 100 - EGP
+												250</span>
+										</li>
+									</ul>
+									<div class="row row-sm">
+										<div class="col-6">
+											<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
+										</div>
+										<div class="col-6">
+											<a href="booking.html" class="btn book-btn">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+
+							<!-- Doctor Widget -->
+							<div class="profile-widget">
+								<div class="doc-img">
+									<a href="doctor-profile.html">
+										<img class="img-fluid" alt="User Image"
+											src="assets/img/doctors/cardiologist1.jpg">
+									</a>
+									<a href="javascript:void(0)" class="fav-btn">
+										<i class="far fa-bookmark"></i>
+									</a>
+								</div>
+								<div class="pro-content">
+									<h3 class="title">
+										<a href="doctor-profile.html" data-i18n="drTamerAshraf">Dr. Tamer Ashraf</a>
+										<i class="fas fa-check-circle verified"></i>
+									</h3>
+									<p class="speciality" data-i18n="consultantOfPediatric">Consultant Of Pediatric and
+										Neonatal Surgery - MRCS - Mansoura University</p>
+									<div class="rating">
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star filled"></i>
+										<i class="fas fa-star"></i>
+										<span class="d-inline-block average-rating">(49)</span>
+									</div>
+									<ul class="available-info">
+										<li>
+											<i class="fas fa-map-marker-alt"></i><span
+												data-i18n="peditricMaleDoctorAddress">El-Mansoura : Station
+												Square</span>
+										</li>
+										<li>
+											<i class="far fa-clock"></i> Available on Fri, 22 Mar
+										</li>
+										<li>
+											<i class="far fa-money-bill-alt"></i><span
+												data-i18n="peditricMaleDoctorPrice">EGP 100 - EGP 300</span>
+										</li>
+									</ul>
+									<div class="row row-sm">
+										<div class="col-6">
+											<a href="doctor-profile.html" class="btn view-btn"
+												data-i18n="viewProfile">View Profile</a>
+										</div>
+										<div class="col-6">
+											<a href="booking.html" class="btn book-btn" data-i18n="bookNow">Book Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Doctor Widget -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Popular Section -->
+
+		<!-- Availabe Features -->
+		<section class="section section-features">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-5 features-img">
+						<img src="assets/img/features/feature.png" class="img-fluid" alt="Feature">
+					</div>
+					<div class="col-md-7">
+						<div class="section-header">
+							<h2 class="mt-2" data-i18n="availableFeature">Availabe Features in Our Clinic</h2>
+							<p data-i18n="featureBreif">We provide world-class consulting services with the best medical
+								team.</p>
+						</div>
+						<div class="features-slider slider">
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-01.jpg" class="img-fluid" alt="Feature">
+								<p data-i18n="patientWard">Patient Ward</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-02.jpg" class="img-fluid" alt="Feature">
+								<p data-i18n="testRoom">Test Room</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-03.jpg" class="img-fluid" alt="Feature">
+								<p data-i18n="ICU">ICU</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-04.jpg" class="img-fluid" alt="Feature">
+								<p data-i18n="laboratory">Laboratory</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-05.jpg" class="img-fluid" alt="Feature">
+								<p data-i18n="operation">Operation</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-06.jpg" class="img-fluid" alt="Feature">
+								<p data-i18n="medical">Medical</p>
+							</div>
+							<!-- /Slider Item -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Availabe Features -->
+
+		<!-- Footer -->
+		<footer class="footer">
+
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-about">
+								<div class="footer-logo">
+									<img src="assets/img/footer-logo.png" alt="logo">
+								</div>
+								<div class="footer-about-content">
+									<p>Modernlabs is a free service that lets you speak with doctors live over video
+										chat.With carefully, you can get more information, be more active in your own
+										healthcare, and help reduce wait times at hospitals & clinics.</p>
+									<div class="social-icon">
+										<ul>
+											<li>
+												<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+											</li>
+											<li>
+												<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+											</li>
+											<li>
+												<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /Footer Widget -->
+
+						</div>
+
+						<div class="col-lg-3 col-md-6">
+
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-menu">
+								<h2 class="footer-title" data-i18n="forPatients">For Patients</h2>
+								<ul>
+									<li><a href="search.html"><i
+												class="fas fa-angle-double-right"></i><span data-i18n="searchForDoctors">Search for
+													Doctors</span></a></li>
+									<li><a href="login.html"><i class="fas fa-angle-double-right"></i>
+											<span data-i18n="login">Login</span></a></li>
+									<li><a href="register.html"><i
+												class="fas fa-angle-double-right"></i><span data-i18n="register">Register</span></a>
+									</li>
+									<li><a href="booking.html"><i
+												class="fas fa-angle-double-right"></i><span data-i18n="booking">Booking</span></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /Footer Widget -->
+
+						</div>
+
+						<div class="col-lg-3 col-md-6">
+
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-menu">
+								<h2 class="footer-title" data-i18n="forDoctors">For Doctors</h2>
+								<ul>
+									<li><a href="appointments.html"><i
+												class="fas fa-angle-double-right"></i>
+											<span data-i18n="appointment">Appointments</span></a></li>
+									<li><a href="chat.html" ><i class="fas fa-angle-double-right"></i>
+											<span data-i18n="chat">Chat</span></a></li>
+									<li><a href="login.html"><i class="fas fa-angle-double-right"></i>
+											<span data-i18n="login">Login</span></a></li>
+									<li><a href="doctor-register.html"><i class="fas fa-angle-double-right"></i>
+											<span data-i18n="register">Register</span></a></li>
+								</ul>
+							</div>
+							<!-- /Footer Widget -->
+
+						</div>
+
+						<div class="col-lg-3 col-md-6">
+
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-contact">
+								<h2 class="footer-title" data-i18n="contactUs">Contact Us</h2>
+								<div class="footer-contact-info">
+									<div class="footer-address">
+										<i class="fas fa-map-marker-alt mr-2"></i>
+										<span data-i18n="footAddress"> El-Mansoura : Kanat Elswis st -infront of moaskar
+											gedeela </span>
+									</div>
+									<div>
+										<i class="fas fa-phone-alt mr-2"></i>
+										<span data-i18n="phoneNumber">
+											+1 315 369 5943
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- /Footer Widget -->
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- /Footer Top -->
+		</footer>
+		<!-- /Footer -->
+
+	</div>
+	<!-- /Main Wrapper -->
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- Slick JS -->
+	<script src="assets/js/slick.js"></script>
+
+	<!-- Custom JS -->
+	<script src="assets/js/translation.js"></script>
+	<script type="module" src="assets/js/main-rtl.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/script.js"></script>
+
+</body>
+
+<!-- doccure/  30 Nov 2019 04:11:53 GMT -->
+
+</html>
