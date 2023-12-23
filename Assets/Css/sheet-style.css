@@ -494,7 +494,7 @@ body {
 
 /*============== media-query ==========*/
 
-@media (min-width: 360px) and (max-width: 480px) {
+@media (min-width: 360px) and (max-width: 1024px) {
     header .nav-bar .nav-links {
         display: none;
     }
