@@ -11,15 +11,15 @@ let proj_data = {
     },
     project2: {
         name: "hourseClub",
-        imgSrc: "/Horse Templete.gif"
+        imgSrc: "./Horse Templete.gif"
     },
     project3: {
         name: "bankWebSite",
-        imgSrc: "/ezgif.com-video-to-gif.gif"
+        imgSrc: "./ezgif.com-video-to-gif.gif"
     },
     project4: {
         name: "bookingApp",
-        imgSrc: "/Showreel-Grid-Mobile-[remix].gif"
+        imgSrc: "./Showreel-Grid-Mobile-[remix].gif"
     },
 };
 
