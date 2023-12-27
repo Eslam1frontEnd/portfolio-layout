@@ -7,19 +7,19 @@ document.addEventListener('mousemove', (e) => {
 let proj_data = {
     project1: {
         name: "learningSystem",
-        imgSrc: "/Assets/img/projects-img/4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.webp"
+        imgSrc: "./Assets/img/projects-img/4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.webp"
     },
     project2: {
         name: "hourseClub",
-        imgSrc: "/Assets/img/projects-img/Horse Templete.gif"
+        imgSrc: "./Assets/img/projects-img/Horse Templete.gif"
     },
     project3: {
         name: "bankWebSite",
-        imgSrc: "/Assets/img/projects-img/ezgif.com-video-to-gif.gif"
+        imgSrc: "./Assets/img/projects-img/ezgif.com-video-to-gif.gif"
     },
     project4: {
         name: "bookingApp",
-        imgSrc: "/Assets/img/projects-img/Showreel-Grid-Mobile-[remix].gif"
+        imgSrc: "./Assets/img/projects-img/Showreel-Grid-Mobile-[remix].gif"
     },
 };
 
