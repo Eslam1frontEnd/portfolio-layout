@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f1f1f1;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header-bg.jpg");
+    height: 750px;
+}
+
+.head {
+    box-shadow: -21.213px 21.213px 30px 0 rgb(158 158 158 / 30%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 997;
+    background-color: #fff;
+}
+
+.head .tel {
+    color: #222;
+    font-weight: 500;
+}
+
+.head .lnr {
+    background: linear-gradient(0deg, #f45622 0%, #f53e54 100%);
+}
+
+.head span {
+    color: #fff;
+    padding: 28px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.head a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.header .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.header .row .icon {
+    background: linear-gradient(90deg, #f25625, #f53e50);
+}
+
+.header .navbar {
+    background-color: #fff;
+}
+
+.nav-item a:hover{
+     color: #f53e54 !important;
+}
+
+.header .banner {
+    position: relative;
+    padding-top: 205px;
+}
+
+.text-white {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.video {
+    background-image: url("../images/video-bg.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.video .play-icon{
+    position: absolute;
+    bottom: 44%;
+    left: 44%;
+}
+
+.intro::after {
+    content: "";
+    text-align: center;
+    background-color: #6e1929;
+    width: 300px;
+    height: 2px;
+    margin: 8px auto;
+    display: block;
+}
+
+.book {
+    height: 46px;
+    background: linear-gradient(90deg, #f25625, #f53e50);
+    border: none;
+    border-radius: none;
+}
+
+.book:hover{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn {
+    background: #222 !important;
+}
+
+.btn:hover{
+    background: transparent !important;
+    border: 1px solid #f53e54 !important;
+    color: #f53e54 !important;
+}
+
+
+.services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/feature-bg.jpg");
+}
+
+.services .title:hover{
+    color: #f53e54 !important;
+    cursor: pointer;
+}
+
+.plan-num {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    line-height: 85px;
+    border-radius: 50%;
+    border: 31px solid #f1f1f1;
+    background: linear-gradient(90deg, #f25625, #f53e50);
+}
+
+.plan-card:hover {
+    background-image: url("../images/g5.jpg");
+    background-size: cover;
+    color: #fff;
+}
+
+.booking {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.797), rgba(0, 0, 0, 0.797)), url("../images/booking-bg.jpg");
+}
+
+.booking .booking-right {
+    border: 1px solid #979196;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.booking-right .btn-booking{
+    background: linear-gradient(90deg, #f25625, #f53e50);
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+
+.gallary{
+    overflow: hidden;
+}
+
+.gallary img:hover {
+    background: linear-gradient(90deg, #f25625, #f53e50);
+}
+
+.blog-btn{
+    text-decoration: none;
+    background: #f6214b;
+    color: #fff;
+    border-radius: none;
+    padding: 10px 12px;
+}
+
+.blog-btn:hover{
+    color: #000 !important;
+    border: 1px solid #000;
+    background: transparent;
+}
+
+
+.footer-area .number {
+    color: #f6214b;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.form-control{
+    position: relative;
+    width: 350px !important;
+    height: 60px;
+}
+
+.input-group-btn {
+    margin-left: -36px;
+    z-index: 600;
+    position: absolute;
+    right: 0;
+}
+
+.single-footer-widget .navbar-form .genric-btn {
+    padding: 0;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.footer-area .genric-btn {
+    background: #f6214b;
+    border: none;
+    border-radius: 57px;
+    height: 36px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.footer-bottom .footer-text a{
+    text-decoration: none;
+    color: #f53e54;
+    font-weight: bold;
+}
+
+.footer-area .footer-bottom .footer-social a {
+    background: #f9f9ff;
+    margin: 2px;
+    padding: 12px 16px;
+    color: #000;
+}
+
+.footer-area .footer-bottom .footer-social a:hover{
+    background: #f53e50;
+    color: #fff;
+}
