@@ -570,7 +570,7 @@ footer .social-icons i {
     margin-inline: 10px;
 }
 
-@media (min-width: 360px) and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .col-sm-12 {
         flex: 0 0 100%;
         max-width: 100%;
