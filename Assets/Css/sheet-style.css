@@ -519,7 +519,7 @@ header .mobile-menu i {
 }
 /*============== media-query ==========*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 428px) {
     header{
         position: relative;
     }
