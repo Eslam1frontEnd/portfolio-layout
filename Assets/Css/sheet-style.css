@@ -15,6 +15,30 @@ ul {
 body {
     background-color: rgba(22, 22, 23, 1) !important;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.nav-bar.active-navlinks .nav-links{
+    padding: 40px 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #0000006d;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
+.nav-bar.active-navlinks .nav-links li {
+    margin-bottom: 2rem;
+}
+
+.nav-bar.active-navlinks .nav-links a {
+    font-size: 28px;
+    font-weight: 400;
 }
 
 .cursor {
@@ -37,8 +61,7 @@ body {
 .cursor-active {
     transform: scale(8);
 }
-
-#section {
+.section {
     margin-bottom: 6rem;
 }
 
@@ -491,48 +514,33 @@ body {
     color: rgba(237, 236, 235, 1.00);
 }
 
-
+header .mobile-menu i {
+    display: none;
+}
 /*============== media-query ==========*/
 
-@media (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    header{
+        position: relative;
+    }
+
     header .nav-bar .nav-links {
         display: none;
     }
 
     header .mobile-menu {
-        /* position: relative; */
-        padding-right: 1rem;
+        padding-right: 2rem;
         flex: 0 0 16.66%;
         max-width: 16.66%;
         text-align: end;
     }
 
     header .mobile-menu i {
+        position: relative;
+        display: inline-block;
         font-size: 36px;
         color: rgba(237, 236, 235, 1.00);
-    }
-
-    header .mobile-menu:hover .nav-links {
-        padding: 40px 0;
-        width: 100%;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        background: #0000006d;
-        top: 150px;
-        left: 60px;
-        transform: translate(-60px, -50px);
-        z-index: 999;
-    }
-
-    header .mobile-menu:hover .nav-links li {
-        margin-bottom: 2rem;
-    }
-
-    header .mobile-menu:hover .nav-links li a {
-        font-size: 28px;
-        font-weight: 400;
+        z-index: 3;
     }
 
     .banner-container {
@@ -544,6 +552,7 @@ body {
     }
 
     .banner-left-side {
+        padding-top: 12rem;
         position: absolute;
         z-index: 1;
     }
@@ -557,8 +566,16 @@ body {
         font-size: 40px;
     }
 
+    .horizontal-slider{
+        margin-bottom: 9rem;
+    }
+
     .horizontal-slider ul {
-        width: 312px;
+        width: 340px;
+    }
+
+    .banner-left-side .banner-bottom{
+        justify-content: space-around;
     }
 
     .banner-right-side {
@@ -606,10 +623,19 @@ body {
         column-gap: .4rem;
     }
 
+    .project-card {
+        column-gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+
     .about-section, .portfolio-section, .footer {
-        padding: 5rem 1.5rem;
+        padding: 3.5rem 1.5rem;
         position: relative;
         background: rgba(15, 15, 15, 1);
+    }
+
+    .contact-section{
+        padding: 3.5rem 0;
     }
 
     .contact-frame{

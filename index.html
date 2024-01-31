@@ -24,13 +24,13 @@
             <img src="Assets/img/logo 1.png" style="width: 140px; height: 100%;">
         </div>
         <div class="nav-bar mobile-menu d-lg-flex pe-lg-5 col-lg-8 justify-content-end">
-            <i class="fa-solid fa-bars fx-2"></i>
+            <i class="mobile-menu-icon fa-solid fa-bars fx-2"></i>
             <ul class="nav-links">
                 <li><a class="active-link" href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about-id">About</a></li>
+                <li><a href="#service-id">Services</a></li>
+                <li><a href="#portfolio-id">Portfolio</a></li>
+                <li><a href="#contact-id">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -41,7 +41,7 @@
                 <div class="sub-title mb-3">
                     <h1>Welcome!</h1>
                 </div>
-                <div class="horizontal-slider mb-5 d-flex align-items-center justify-content-lg-start">
+                <div class="horizontal-slider mb-lg-5 d-flex align-items-center justify-content-lg-start">
                     <div class="TEXT-54-25 slider-label">
                         <p id="i_am">I am</p>
                     </div>
@@ -72,7 +72,7 @@
         </div>
     </div>
     <div class="main">
-        <div id="section" class="about-section">
+        <div id="about-id" class="section about-section">
             <!-- Vector Node as Base64 Image -->
             <img id="id-Vector" className='VECTOR-54-438'
                 src="data:image/png;base64, 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"
@@ -105,13 +105,14 @@
                                 velit class
                                 aptent taciti
                                 sociosqu ad litora torquent metus metus ullamcorper.</p>
-                            <p ">Nulla metus metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat condimentum velit class
-                                        aptent taciti
-                                        sociosqu ad litora torquent metus metus ullamcorper vel tincidunt sed class aptent
-                                        taciti sociosqu ad litora torquent type setting industry when per conubia
-                                        nostra.</p>
-                                </div>
-                                <div class=" buttons d-flex gap-lg-4">
+                            <p>Nulla metus metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat condimentum
+                                velit class
+                                aptent taciti
+                                sociosqu ad litora torquent metus metus ullamcorper vel tincidunt sed class aptent
+                                taciti sociosqu ad litora torquent type setting industry when per conubia
+                                nostra.</p>
+                        </div>
+                        <div class="buttons d-flex gap-lg-4">
                             <div class="download-btn">
                                 <a href="#">Download CV</a>
                             </div>
@@ -123,16 +124,16 @@
                     <div class="skills-section">
                         <div class="section-header">
                             <h5 id="id-Skills-0" class="border-bottom border-white" style="
-                        font-size:28px;
-                        font-weight:400;
-                        text-transform:uppercase;
-                        white-space:nowrap;
-                        line-height: 36.400001525878906px;
-                    letter-spacing: 2px;
-                    color: rgba(255,255,255,1.00);
-                    ;font-family: Sora;
-                    font-style: Regular;
-                    ">Skills</h5>
+                                font-size:28px;
+                                font-weight:400;
+                                text-transform:uppercase;
+                                white-space:nowrap;
+                                line-height: 36.400001525878906px;
+                            letter-spacing: 2px;
+                            color: rgba(255,255,255,1.00);
+                            ;font-family: Sora;
+                            font-style: Regular;
+                            ">Skills</h5>
                         </div>
                         <div class="skills-frame d-flex flex-wrap align-items-center px-lg-4 pt-5">
                             <div class="skill-card d-flex flex-wrap col-lg-5">
@@ -262,7 +263,7 @@
                 alt="image" />
             <!-- Base64 Ends -->
         </div>
-        <div id="section" class="service-section">
+        <div id="service-id" class="section service-section">
             <div class="section-frame-header">
                 <span>Services</span>
             </div>
@@ -313,7 +314,7 @@
                 </div>
             </div>
         </div>
-        <div id="section" class="portfolio-section">
+        <div id="portfolio-id" class="section portfolio-section">
             <!-- Vector Node as Base64 Image-->
             <img id="id-Vector" className='VECTOR-54-438'
                 src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAB0kAAAA3CAYAAABpYHLuAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAmWSURBVHgB7d1BctpIFIDhhrHXQzaZZXT/VY7g3IDcQFknVaMsXcFouhFtGkUQ7MFYiO+rIiDAnkUqLtv/vNezjx//aQMAAAAAAADAdDXx9jCbhYfHx8fPdwEAAAAAAABgWpq2Dcu2bR9CWD/8+PHjS/miSAoAAAAAAABcvRhFH2IQTWH082q1+tpEh94rkgIAAAAAAADXZjMpemoU7RNJAQAAAAAAgLHbRNH5PHx+enpavjSK9omkAAAAAAAAwNg0aUJ0Pp8t1+v1l+/fvy/DGYmkAAAAAAAAwHtbtu36Id3/+vXroWmab+ENiaQAAAAAAADAJZ11de5riKTA1DTb262qAgAAAAAAjMtFp0RPIZLC9auHnmzb35+fzTb7uw8ExLaZzWaDr6Xn1+v10fAYP2997PX4OX7GL3z/hhON4QvkrVksFp9Ofe/9/f2H+Hf+95/eF//eq9e+Hj//Ir5jceAjq8OfczAUL7Y3AAAAAADeVh1vy/i72of3mhI9xezjx3/aAJyqP6WYxsGfr4ciZHyuLq+HYmL/uUNBUTiE8xoKw0MB+K+//lqs1+u9yDqfzxddyN2JXw+q8jr+W47v2Y+zAxG3fw0AAAAAcC02a3NDWC/j70wfHh8fv4wxiA4RSbl2e9Fyf3qyDI+7Kcn+VGT8R9s8PT3l1/px8ue1/GMGpqEMt0PBtpy+7Yfa/Ug7q/Y/bi/G7r0GAAAAAHCC5yAaRrQ297VEUi6hDJnF5OUuYuZpy37AzBOWvXgpXAKcSYyyKbJuQmw/ypZBtnycY2w5KRu/jpcrjasAAAAAAFyzSQXRISIph9Tb+03ULNfIDgXNoZhpNSzAbcsBtoyveXVxnoLNZ8/2gmu1/RRVAAAAAADe2uSD6BCRdHrq7X0vbnbrZofC5mq1yh9jQhOA0ckriO/u7qp0n0Nrnm7drRnurkVWAAAAADjoJoPoEJF0fPJq2u1a2ryStoucOWzmczQFTgA4LkXWPM06FFgHpljL1cEAAAAAcK3qeFvG33k9pMePj49LW0B3RNK3U6c/4i9d6/40Zw6d6b5YTytyAsCIlHE1XaewulsTvIurxXmsVQAAAACAy0t9qY6/t1rO57Pl09PTcrVafdWdjhNJT1OHvcnO/dW1YicAkB2aXM3nr/bWAptaBQAAAOAl6nhbtu16c3/L63L/r1uMpE1xS1U9ndtZ5+CZ1tjG+2+CJwBwKTGsLmJYrQ6tBBZWAQAAAG6O6dA3NpVIWqc/0mrbctIzTXiW0VNJBwCm4oUTq1UAAAAAYKxSDH1IMTQ4O/RixhxJN9OewicAwHmUYdUZqwAAAAAXV8dbDKHtMvUuq3Lf13tE0t/iZ/wFXZ3P9lytVvE5a24BAN7boTXAplUBAAAAjqpDcW5ovH2NQbTWvsbl3JF0sx85FGd95snPNBocxE8AgElL06p3d3dVetyfVnW2KgAAADAh26HA9iH3MJOh1+UlkbTZ3pZlADX9CQDAa71gBXAVRFUAAADg8jYDgvH3FUtnhk5LGUnr0BXvtAt5E0NNgAIAMCZlVE0rgONTVRdV2xhT55WoCgAAALxSHYoVuXlIUAydrln6RZO/YAAApujYuaq9qJrDKgAAADBde1Oh8fcETVqRGwwL3qRZAAAANo5F1fT/F6ZzVUVVAAAAGLXnEJo3p8bb1xhDayGUkkgKAACvlKJqvPv77u6uOhRV0/tiWE33VQAAAADOodnentfj5iMkbU/lVCIpAABcSBlV03UKqqIqAAAADPptItQ5oZyTSAoAACMWu+qnflRNj9s2RdTZ9vlNUM1rgAEAAOBa1PHWpBAaf7ZNQTRdW43LRYikAAAwISmq3t/ff0jnqqagOp/PF2lSNUXVeJ3uF9tzVasgqgIAAPC29tbixp9R6/i4Tmtx4/1PIZT3JJICAMANK6NqOlc1PlV1UbWNMXVeFVE1h1UAAAAo1aFbhdv0pkH/tRaXMRNJAQCAkx06VzU9tgIYAABgkmL4TCG0rXMEdTYoUyCSAgAAb8q0KgAAwGgV63BNgnJbRFIAAGBUhqZVna0KAADwKnW8NfHnqWUIbZPPBF2v199iBK2dCcotE0kBAICrl8Lq/f19ladV4w/8C2uAAQCAiatDNwVat+26TgE0/izUWIULpxFJAQCAm/SCsGpiFQAAuLQ6CKDwpkRSAACAE71wFbAzVgEAgL7NGaDx54Y6hHT2Z7cCNwXQ4BxQuCiRFAAA4I3Ftvrp/v7+Q39qNcXV+GPZoje1Kq4CAMD1ORg/8/RnfP2nM0BhPERSAACAEepPrYqrAADwLurt/TJ+H96InzAdIikAAMDEHJpcTa+Va4HTdQys6fkcWQEA4Bb8NvUZv0feRM8YQJv4/fM3a29h+kRSAAAANo5Nr6brFFi7d3bX28CaVAEAAN5XHbr4WfcnPoVPYIhICgAAwFmUE6zpOsfVP0yxJlUAAICdprg9R8+hac9g1S3wSiIpAAAAo5Aia7rvT7LGX4ItunNYB6dZ86pgK4MBAMarDt1626Zbb7v5Pq5O0TOf7Rkf/zTpCVySSAoAAMCknBZb0/1s0ZtsFVwBAI6r0x/pLM/4vVPTn/DsXhM8gesgkgIAAMAB+ZzWco1wjq7p8W6VcBddu4/qnutet1IYABident/cLIzXafYuVqt8nuttAUmRyQFAACAC+pPuiY5tg6tFj4w7ZpUAQC4RfmszsGJzhw607mdT09PjdAJMEwkBQAAgCuWp13T46Hwmu8T4RUARqFOf6TA2V22+X4wcubVtUHkBDgrkRQAAADY86fwOnS+6/YdxXvFVwAmZW96s3tqP252r3XPmeIEGD+RFAAAALiYvG740DmvAiwAZ/IcNcP27M3dWtrkcNgsJjcTcRNgokRSAAAAYBIOTcAeirBJXkHcmT0/7oXY8jEA51UXjzcxs3vYPj8fvyY/P85Bs3xcTGuG2DO/BQA4gUgKAAAA8AJljC0nYpPjQbacjE1mVfl5YwQor4VZ4L3V5cVuxezmqnz8PJGZz9LcfczufWXIDKYzARgBkRQAAABg5Mowm/TjbJLPjD10/Xuk3byrCj29WLv5zwfBFt5D3bsupiw3/1aL1bHPz+19TBkp+9e9lbKJcAnATRFJAQAAAHixfL5sqVxzXOoH26Q/aVvaX4O893nixxwOtgOBt+9PrzMt9bEX9ycjd4biY/FRz1OT+5+rrYf/G78/35uo3LAiFgAuTyQFAAAAgK3+1O4xQxO9LzUUkK/VoVB4ioGpxqNERQDg//oPO8qCuUUtHv8AAAAASUVORK5CYII="
@@ -443,7 +444,7 @@
                 alt="image" />
             <!-- Base64 Ends -->
         </div>
-        <div id="section" class="contact-section">
+        <div id="contact-id" class="section contact-section">
             <div class="section-frame-header">
                 <span>Contact Us</span>
             </div>
@@ -517,11 +518,18 @@
             </div>
         </div>
     </div>
-
+    
     <div class="cursor">
         <img src="Assets/img/bg.jpg">
     </div>
 
+    <script>
+        document.querySelector('.mobile-menu-icon').addEventListener('click', () => {
+            document.querySelector('.fa-bars').classList.toggle('fa-xmark');
+            document.querySelector('.nav-bar').classList.toggle('active-navlinks');
+        });
+    </script>
+    
     <!-- jQuery -->
     <script src="Assets/javascript/jquery.min.js"></script>
 
@@ -530,7 +538,6 @@
     <script src="Assets/javascript/bootstrap.min.js"></script>
 
     <script src="Assets/javascript/cursor.js"></script>
-
 </body>
 
 </html>
