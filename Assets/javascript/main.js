@@ -16,6 +16,10 @@ window.onload = function(){
             name: "bookingApp",
             imgSrc: "/Assets/img/UI App.png"
         },
+        project5: {
+            name: "mindCraft",
+            imgSrc: "/Assets/img/mind-craft-shot.png"
+        },
     };
 
     let projects = Object.values(proj_data);
@@ -43,6 +47,10 @@ let proj_data = {
     project4: {
         name: "bookingApp",
         imgSrc: "/Showreel-Grid-Mobile-[remix].gif"
+    },
+    project5: {
+        name: "bookingApp",
+        imgSrc: "/Animated-smartphones_-slider-[remix].gif"
     },
 };
 

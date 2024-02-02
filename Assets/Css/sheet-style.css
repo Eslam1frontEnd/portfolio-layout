@@ -19,7 +19,8 @@ body {
 }
 
 .nav-bar.active-navlinks .nav-links{
-    padding: 40px 0;
+    padding: 120px 0;
+    height: 815px;
     width: 100%;
     align-items: center;
     display: flex;
@@ -544,7 +545,7 @@ header .mobile-menu i {
     }
 
     .banner-container {
-        height: 650px;
+        height: 750px;
     }
 
     .banner-frame {
@@ -559,6 +560,15 @@ header .mobile-menu i {
 
     .banner-text .sub-title h1 {
         font-size: 50px;
+        color: #000;
+    }
+
+    .horizontal-slider .slider-label p{
+        color: #000;
+    }
+
+    .horizontal-slider ul li p{
+        color: rgb(210 119 0);
     }
 
     .horizontal-slider .slider-label p,
@@ -571,7 +581,7 @@ header .mobile-menu i {
     }
 
     .horizontal-slider ul {
-        width: 340px;
+        width: 317px;
     }
 
     .banner-left-side .banner-bottom{
@@ -607,7 +617,7 @@ header .mobile-menu i {
     }
 
     .skills-section .skill-card progress {
-        inline-size: 22rem;
+        inline-size: 30rem;
     }
 
     .service-section {
